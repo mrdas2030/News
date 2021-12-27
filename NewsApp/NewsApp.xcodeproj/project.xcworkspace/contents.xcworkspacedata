@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mrdas/Desktop/News/NewsApp/NewsApp.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

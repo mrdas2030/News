@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "031FF8B0276F53C6003A95A7"
-               BuildableName = "fireBaseApp.app"
+               BuildableName = "NewsApp.app"
                BlueprintName = "NewsApp"
                ReferencedContainer = "container:NewsApp.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "031FF8B0276F53C6003A95A7"
-            BuildableName = "fireBaseApp.app"
+            BuildableName = "NewsApp.app"
             BlueprintName = "NewsApp"
             ReferencedContainer = "container:NewsApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "031FF8B0276F53C6003A95A7"
-            BuildableName = "fireBaseApp.app"
+            BuildableName = "NewsApp.app"
             BlueprintName = "NewsApp"
             ReferencedContainer = "container:NewsApp.xcodeproj">
          </BuildableReference>

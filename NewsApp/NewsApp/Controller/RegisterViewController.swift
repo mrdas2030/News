@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
     @IBOutlet weak var userImageView: UIImageView! {
         didSet {
-            userImageView.layer.borderColor = UIColor.systemGreen.cgColor
+            userImageView.layer.borderColor = UIColor.systemBackground.cgColor
             userImageView.layer.borderWidth = 3.0
             userImageView.layer.cornerRadius = userImageView.bounds.height / 2
             userImageView.layer.masksToBounds = true
@@ -36,7 +36,7 @@ class RegisterViewController: UIViewController {
     @IBAction func handleRegister(_ sender: Any) {
         
         if let image = userImageView.image,
-           let imageData = image.jpegData(compressionQuality: 0.75),
+           let imageData = image.jpegData(compressionQuality: 0.25),
            let name = nameTextField.text,
            let email = emailTextField.text,
            let password = passwordTextField.text,
@@ -50,7 +50,7 @@ class RegisterViewController: UIViewController {
                 if let authResult = authResult {
                     let storageRef = Storage.storage().reference(withPath: "users/\(authResult.user.uid)")
                     let uploadMeta = StorageMetadata.init()
-                    uploadMeta.contentType = "image/jpeg"
+                    uploadMeta.contentType = "image/png"
                     storageRef.putData(imageData, metadata: uploadMeta) { storageMeta, error in
                         if let error = error {
                             print("Registration Storage Error",error.localizedDescription)
