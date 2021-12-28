@@ -33,12 +33,9 @@ struct NewsAPI {
                 }catch{
                     print(error)
                 }
-                
             }
-            
         }
         task.resume()
     }
-    
 }
 
