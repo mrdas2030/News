@@ -76,7 +76,7 @@ class PostViewController: UIViewController {
            let description = postDescriptionTextView.text,
            let currentUser = Auth.auth().currentUser {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
-//            ref.addDocument(data:)
+
             var postId = ""
             if let selectedPost = selectedPost {
                 postId = selectedPost.id

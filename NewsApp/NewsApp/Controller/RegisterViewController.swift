@@ -22,10 +22,8 @@ class RegisterViewController: UIViewController {
         }
     }
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +32,6 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func handleRegister(_ sender: Any) {
-        
         if let image = userImageView.image,
            let imageData = image.jpegData(compressionQuality: 0.25),
            let name = nameTextField.text,
@@ -50,7 +47,7 @@ class RegisterViewController: UIViewController {
                 if let authResult = authResult {
                     let storageRef = Storage.storage().reference(withPath: "users/\(authResult.user.uid)")
                     let uploadMeta = StorageMetadata.init()
-                    uploadMeta.contentType = "image/png"
+                    uploadMeta.contentType = "image/jpeg"
                     storageRef.putData(imageData, metadata: uploadMeta) { storageMeta, error in
                         if let error = error {
                             print("Registration Storage Error",error.localizedDescription)
@@ -85,10 +82,7 @@ class RegisterViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
-    
 }
 
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
