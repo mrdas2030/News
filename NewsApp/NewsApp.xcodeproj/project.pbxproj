@@ -98,18 +98,12 @@
 		031FF8B3276F53C6003A95A7 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				0372467427722052002FDED4 /* View */,
-				031FF8D7276F6D84003A95A7 /* Activity.swift */,
-				031FF8D5276F6D5D003A95A7 /* imageView.swift */,
-				0372467327721FFD002FDED4 /* Controller */,
 				0372466E27721F92002FDED4 /* Model */,
+				0372467427722052002FDED4 /* View */,
+				0372467327721FFD002FDED4 /* Controller */,
 				031FF8BD276F53C8003A95A7 /* Assets.xcassets */,
 				031FF8C2276F53C8003A95A7 /* Info.plist */,
 				031FF8C8276F547A003A95A7 /* GoogleService-Info.plist */,
-				031878DE2778817000BD86FD /* ProfileViewController.swift */,
-				031878E0277892A600BD86FD /* UserFavorite.swift */,
-				03AB7651277AEA840069084D /* NewsViewController.swift */,
-				03AB7657277B0C9D0069084D /* DetailesNewsViewController.swift */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -117,9 +111,12 @@
 		0372466E27721F92002FDED4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				031878E0277892A600BD86FD /* UserFavorite.swift */,
 				0372466F27721FB0002FDED4 /* Post.swift */,
 				0372467127721FD6002FDED4 /* User.swift */,
+				031FF8D5276F6D5D003A95A7 /* imageView.swift */,
 				03AB7653277AECF80069084D /* NewsAPI.swift */,
+				031FF8D7276F6D84003A95A7 /* Activity.swift */,
 				03AB7655277AF6690069084D /* postsNews.swift */,
 			);
 			path = Model;
@@ -130,7 +127,10 @@
 			children = (
 				031FF8B4276F53C6003A95A7 /* AppDelegate.swift */,
 				031FF8B6276F53C6003A95A7 /* SceneDelegate.swift */,
+				03AB7657277B0C9D0069084D /* DetailesNewsViewController.swift */,
 				031FF8B8276F53C6003A95A7 /* HomeViewController.swift */,
+				03AB7651277AEA840069084D /* NewsViewController.swift */,
+				031878DE2778817000BD86FD /* ProfileViewController.swift */,
 				031FF8D1276F65B6003A95A7 /* loginViewController.swift */,
 				031FF8D3276F65F0003A95A7 /* RegisterViewController.swift */,
 				03F8A2FD27705ECB00FED12B /* ViewController.swift */,
