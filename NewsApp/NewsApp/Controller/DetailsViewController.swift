@@ -13,8 +13,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var postDescriptionLabel: UILabel!
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var descriotionLable: UILabel!
+    @IBOutlet weak var titleLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        descriotionLable.text = "descriptionLable".localized
+        titleLable.text = "title".localized
+
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
             postTitleLabel.text = selectedPost.title

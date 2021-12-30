@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     var selectedPost:Post?
     var selectedPostImage:UIImage?
     
+    
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
             postsTableView.delegate = self

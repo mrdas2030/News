@@ -10,6 +10,14 @@ import Firebase
 class PostViewController: UIViewController {
     var selectedPost:Post?
     var selectedPostImage:UIImage?
+    
+    @IBOutlet weak var titleLable: UILabel!
+    
+    @IBOutlet weak var descriptionLable: UILabel!
+    
+//    @IBOutlet weak var shereButton: UIButton!
+    
+    
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!{
         didSet {
@@ -27,19 +35,21 @@ class PostViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLable.text = "title".localized
+        descriptionLable.text = "descriptionLable".localized
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
-            postTitleTextField.text = selectedPost.title
-            postDescriptionTextView.text = selectedPost.description
+//            postTitleTextField.text = "add title"
+//            postDescriptionTextView.text = "add description"
             postImageView.image = selectedImage
-            actionButton.setTitle("Update Post", for: .normal)
+            actionButton.setTitle("UpdatePost".localized, for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(handleDelete))
             deleteBarButton.tintColor = .red
             self.navigationItem.rightBarButtonItem = deleteBarButton
         
         }else {
-            actionButton.setTitle("Add Post", for: .normal)
+            actionButton.setTitle("addPost".localized, for: .normal)
             self.navigationItem.rightBarButtonItem = nil
             
         }

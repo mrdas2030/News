@@ -21,6 +21,16 @@ class RegisterViewController: UIViewController {
             userImageView.addGestureRecognizer(tabGesture)
         }
     }
+//    localizable
+    @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet weak var signLableTitle: UILabel!
+    @IBOutlet weak var emailLable: UILabel!
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var passowrdLable: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var confirmPassowrdLable: UILabel!
+//    =====================\\
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,6 +39,14 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         imagePickerController.delegate = self
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+        signInButton.setTitle("signButton".localized, for: .normal)
+        loginButton.setTitle("login1".localized, for: .normal)
+        welcomeMessage.text = "welcomeMsg".localized
+        emailLable.text = "email".localized
+        nameLable.text = "name".localized
+        passowrdLable.text = "passowrd".localized
+        confirmPassowrdLable.text = "Confirmpassowrd".localized
+        signLableTitle.text = "signUp".localized
         // Do any additional setup after loading the view.
     }
     @IBAction func handleRegister(_ sender: Any) {

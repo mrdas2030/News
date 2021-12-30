@@ -10,6 +10,7 @@ import UIKit
 class NewsViewController: UIViewController {
     var newsAPI = NewsAPI()
     var articles = [Article(title: "", url: "")]
+    @IBOutlet weak var newsTitleLable: UILabel!
     @IBOutlet weak var NewsTableView: UITableView!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailsVC = segue.destination as! DetailesNewsViewController
@@ -19,6 +20,8 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        newsTitleLable.text = NSLocalizedString("news", comment: "")
+        newsTitleLable.text = "news".localized
         NewsTableView.dataSource = self
         NewsTableView.delegate = self
         newsAPI.delegate = self

@@ -1,0 +1,36 @@
+/* 
+  File.strings
+  NewsApp
+
+  Created by يوسف جابر المالكي on 25/05/1443 AH.
+  
+*/
+
+//landingVC
+"news" = "Des nouvelles";
+"login" = "connexion";
+"regester" = "enregistrer";
+"welcome" = "Bienvenue";
+//signInVC
+"signlable" = "S'identifier";
+"email" = "e-mail";
+"passowrd" = "le mot de passe";
+"signButton" = "Continuez";
+"newUser" = "Avoir un compte ?";
+"signUpButton" = "S'inscrire";
+"emailTextField" = "tapez votre email";
+"passowrdTextField" = "Tapez votre mot de passe";
+//regesterVC
+"email" = "E-mail";
+"passowrd" = "le mot de passe";
+"Confirmpassowrd" = "Confirmez le mot de passe";
+"name" = "Nom";
+"signUp" = "S'inscrire";
+"welcomeMsg" = "Salut! C'est un plaisir de vous revoir";
+"signButton" = "S'identifier";
+"login1" = "j'ai un compte";
+//PostVC
+"title" = "Titre :";
+"descriptionLable" = "La description :";
+"addPost" = "Ajouter un message";
+"UpdatePost" = "Mettre à jour le message";
