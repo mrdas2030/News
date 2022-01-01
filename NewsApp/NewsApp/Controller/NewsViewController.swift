@@ -20,8 +20,10 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "News"
+            navigationController?.navigationBar.prefersLargeTitles = true
 //        newsTitleLable.text = NSLocalizedString("news", comment: "")
-        newsTitleLable.text = "news".localized
+//        newsTitleLable.text = "news".localized
         NewsTableView.dataSource = self
         NewsTableView.delegate = self
         newsAPI.delegate = self
@@ -59,7 +61,7 @@ extension NewsViewController:NewsAPIDelegate{
     }
     
     func didFailWithError(error: Error?) {
-        print(error)
+        print(error!)
     }
     
     

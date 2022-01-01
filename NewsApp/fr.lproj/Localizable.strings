@@ -18,11 +18,11 @@
 "signButton" = "Continuez";
 "newUser" = "Avoir un compte ?";
 "signUpButton" = "S'inscrire";
-"emailTextField" = "tapez votre email";
-"passowrdTextField" = "Tapez votre mot de passe";
+//"emailTextField" = "tapez votre email";
+//"passowrdTextField" = "Tapez votre mot de passe";
 //regesterVC
 "email" = "E-mail";
-"passowrd" = "le mot de passe";
+"passowrd" = "mot de passe";
 "Confirmpassowrd" = "Confirmez le mot de passe";
 "name" = "Nom";
 "signUp" = "S'inscrire";

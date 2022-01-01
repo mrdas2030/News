@@ -17,8 +17,8 @@
 "signButton" = "دخول";
 "newUser" = "حساب جديد";
 "signUpButton" = "اشتراك";
-"emailTextField" = "ادخل الايميل هنا ";
-"passowrdTextField" = "ادخل كلمة السر";
+//"emailTextField" = "ادخل الايميل هنا ";
+//"passowrdTextField" = "ادخل كلمة السر";
 //regesterVC
 "email" = "الايميل";
 "passowrd" = "كلمة السر";

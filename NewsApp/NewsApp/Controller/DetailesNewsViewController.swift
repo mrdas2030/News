@@ -11,7 +11,6 @@ class DetailesNewsViewController: UIViewController {
     var urlLink : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-//        wepView.load(NSURLRequest(url: NSURL(string: urlLink!)! as URL) as URLRequest)
         if NSURL(string: urlLink!) != nil{
           wepView.load(NSURLRequest(url: NSURL(string: urlLink!)!as URL)as URLRequest)
         }else{

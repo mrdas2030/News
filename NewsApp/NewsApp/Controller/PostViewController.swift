@@ -21,6 +21,7 @@ class PostViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!{
         didSet {
+            postImageView.layer.cornerRadius = 15
             postImageView.isUserInteractionEnabled = true
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
             postImageView.addGestureRecognizer(tapGesture)
@@ -147,7 +148,7 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     private func showAlert() {
         
-        let alert = UIAlertController(title: "Choose Profile Picture", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Choose Photo", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
             self.getImage(fromSourceType: .camera)
         }))

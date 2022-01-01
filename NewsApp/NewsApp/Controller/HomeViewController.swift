@@ -18,12 +18,15 @@ class HomeViewController: UIViewController {
         didSet {
             postsTableView.delegate = self
             postsTableView.dataSource = self
-//            postsTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Feeds"
+        navigationController?.navigationBar.prefersLargeTitles = true
         getPosts()
+        
         // Do any additional setup after loading the view.
     }
     func getPosts() {
@@ -94,52 +97,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    // old bad way
-    //    func getPosts() {
-    //        let ref = Firestore.firestore()
-    //        ref.collection("posts").addSnapshotListener { snapshot, error in
-    //            if let error = error {
-    //                print("DB ERROR Posts",error.localizedDescription)
-    //            }
-    //            if let snapshot = snapshot {
-    //                for document in snapshot.documents {
-    //                    let data = document.data()
-    //                    if let userId = data["userId"] as? String {
-    //                        ref.collection("users").document(userId).getDocument { userSnapshot, error in
-    //                            if let error = error {
-    //                                print("ERROR user Data",error.localizedDescription)
-    //
-    //                            }
-    //                            if let userSnapshot = userSnapshot,
-    //                               let userData = userSnapshot.data(){
-    //                                let user = User(dict:userData)
-    //                                let post = Post(dict:data,id:document.documentID,user:user)
-    //                                self.posts.append(post)
-    //                                DispatchQueue.main.async {
-    //                                    self.postsTableView.reloadData()
-    //                                }
-    //
-    //                            }
-    //                        }
-    //
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-//    @IBAction func handleLogout(_ sender: Any) {
-//        do {
-//            try Auth.auth().signOut()
-//            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandingNavigationController") as? UINavigationController {
-//                vc.modalPresentationStyle = .fullScreen
-//                self.present(vc, animated: true, completion: nil)
-//            }
-//        } catch  {
-//            print("ERROR in signout",error.localizedDescription)
-//        }
-//
-//    }
-//
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "toPostVC" {
@@ -185,5 +143,7 @@ extension HomeViewController: UITableViewDelegate {
             
         }
     }
+    
 }
+
 
