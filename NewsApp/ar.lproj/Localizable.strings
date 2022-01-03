@@ -33,3 +33,15 @@
 "descriptionLable" = "الوصف :";
 "addPost" = "ارسال";
 "UpdatePost" = "تعديل المنشور";
+//===========================homeVC
+
+"titleHome" = "موجز الاخبار";
+//============NewsVC
+"NewsVC" = "أخبار";
+//======================VideoVC
+"live" = "بث مباشر";
+//=====================profile
+"profile" = "الملف الشخصي";
+"nameProfile" = "الاسم";
+"emailProfile" = "الايميل";
+"changeLangunge" = "تغيير اللغة :";

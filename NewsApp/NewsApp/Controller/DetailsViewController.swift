@@ -25,6 +25,12 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
 //        descriotionLable.text = "descriptionLable".localized
 //        titleLable.text = "title".localized
+        postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]
+        postDescriptionTextView.isEditable = false
+//        postDescriptionTextView.backgroundColor = .yellow
+        postDescriptionTextView.isSelectable = true
+        postDescriptionTextView.isUserInteractionEnabled = true
+        postDescriptionTextView.dataDetectorTypes = .link
 
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
@@ -34,8 +40,5 @@ class DetailsViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-    
-
-   
 }
 

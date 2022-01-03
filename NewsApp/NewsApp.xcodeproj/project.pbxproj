@@ -23,6 +23,7 @@
 		031FF8D4276F65F0003A95A7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D3276F65F0003A95A7 /* RegisterViewController.swift */; };
 		031FF8D6276F6D5D003A95A7 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D5276F6D5D003A95A7 /* imageView.swift */; };
 		031FF8D8276F6D84003A95A7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D7276F6D84003A95A7 /* Activity.swift */; };
+		0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329AD24278235F70014CBF2 /* BundleExtention.swift */; };
 		0338135A277F5B9F00FEF886 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03381359277F5B9F00FEF886 /* VideoViewController.swift */; };
 		0372467027721FB0002FDED4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372466F27721FB0002FDED4 /* Post.swift */; };
 		0372467227721FD6002FDED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372467127721FD6002FDED4 /* User.swift */; };
@@ -57,6 +58,7 @@
 		031FF8D3276F65F0003A95A7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		031FF8D5276F6D5D003A95A7 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
 		031FF8D7276F6D84003A95A7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		0329AD24278235F70014CBF2 /* BundleExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BundleExtention.swift; path = "../../../../تجارب/BMIDemo/BMIDemo/BundleExtention.swift"; sourceTree = "<group>"; };
 		03381359277F5B9F00FEF886 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		0372466F27721FB0002FDED4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0372467127721FD6002FDED4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				03AB7653277AECF80069084D /* NewsAPI.swift */,
 				031FF8D7276F6D84003A95A7 /* Activity.swift */,
 				03AB7655277AF6690069084D /* postsNews.swift */,
+				0329AD24278235F70014CBF2 /* BundleExtention.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				03E57A272770688000469685 /* LandingViewController.swift */,
 				037246752772251F002FDED4 /* PostViewController.swift */,
 				0372467727722750002FDED4 /* DetailsViewController.swift */,
+				03E3BAFB27805F4F00238D65 /* TabBarViewController.swift */,
 				03724679277228EB002FDED4 /* PostTableViewCell.swift */,
 			);
 			path = Controller;
@@ -168,7 +172,6 @@
 			children = (
 				031FF8BF276F53C8003A95A7 /* LaunchScreen.storyboard */,
 				031FF8BA276F53C6003A95A7 /* Main.storyboard */,
-				03E3BAFB27805F4F00238D65 /* TabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				03F8A2FE27705ECB00FED12B /* ViewController.swift in Sources */,
 				03E57A282770688000469685 /* LandingViewController.swift in Sources */,
 				03E3BAFC27805F4F00238D65 /* TabBarViewController.swift in Sources */,
+				0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */,
 				03AB7654277AECF80069084D /* NewsAPI.swift in Sources */,
 				031FF8B7276F53C6003A95A7 /* SceneDelegate.swift in Sources */,
 				03AB7652277AEA840069084D /* NewsViewController.swift in Sources */,

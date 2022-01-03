@@ -34,3 +34,14 @@
 "descriptionLable" = "Description :";
 "addPost" = "Add Post";
 "UpdatePost" = "Update Post";
+//==================================\\
+"titleHome" = "Short News";
+//====================newsVC
+"NewsVC" = "News";
+//=======================VideoVC
+"live" = "Live";
+//=====================profile
+"profile" = "Profile";
+"nameProfile" = "Name";
+"emailProfile" = "Email";
+"changeLangunge" = "Change Language :";

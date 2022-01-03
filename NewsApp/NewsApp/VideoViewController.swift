@@ -23,6 +23,9 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var videoTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "live".localized
         videoTableView.delegate = self
         videoTableView.dataSource = self
 

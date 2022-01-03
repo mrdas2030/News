@@ -69,6 +69,11 @@
                             <constraint firstItem="Ufg-z9-Lnz" firstAttribute="leading" secondItem="bm0-rq-dsR" secondAttribute="leading" constant="8" id="lY2-QG-bFG"/>
                             <constraint firstAttribute="trailing" secondItem="Gda-Jr-4Eg" secondAttribute="trailing" constant="8" id="p6Z-pM-HkQ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>

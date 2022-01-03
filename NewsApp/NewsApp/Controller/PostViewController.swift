@@ -34,8 +34,15 @@ class PostViewController: UIViewController {
         }
     }
     let activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]
+        //postDescriptionTextView.isEditable = false
+//        postDescriptionTextView.backgroundColor = .yellow
+        postDescriptionTextView.isSelectable = true
+        postDescriptionTextView.isUserInteractionEnabled = true
+        postDescriptionTextView.dataDetectorTypes = .link
         titleLable.text = "title".localized
         descriptionLable.text = "descriptionLable".localized
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
@@ -178,5 +185,10 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+}
+
+extension PostViewController: UITextViewDelegate {
+
     
 }

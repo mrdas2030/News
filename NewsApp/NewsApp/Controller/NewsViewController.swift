@@ -20,10 +20,10 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "News"
+        
             navigationController?.navigationBar.prefersLargeTitles = true
-//        newsTitleLable.text = NSLocalizedString("news", comment: "")
-//        newsTitleLable.text = "news".localized
+        title = "NewsVC".localized
+
         NewsTableView.dataSource = self
         NewsTableView.delegate = self
         newsAPI.delegate = self

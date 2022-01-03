@@ -14,11 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let window = window {
+            
+            guard let _ = (scene as? UIWindowScene) else { return }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let _ = Auth.auth().currentUser {
                 let navigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as!UITabBarController
                 window.rootViewController = navigationController
                 window.makeKeyAndVisible()
+//
             }
         }
     }

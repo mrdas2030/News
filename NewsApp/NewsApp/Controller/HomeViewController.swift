@@ -22,9 +22,11 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+// ==================== Title ========================================\\
         
-        title = "Feeds"
         navigationController?.navigationBar.prefersLargeTitles = true
+        title = "titleHome".localized
+// ================================================================\\
         getPosts()
         
         // Do any additional setup after loading the view.

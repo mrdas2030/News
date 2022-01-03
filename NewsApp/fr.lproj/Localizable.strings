@@ -34,3 +34,14 @@
 "descriptionLable" = "La description :";
 "addPost" = "Ajouter un message";
 "UpdatePost" = "Mettre à jour le message";
+//=========================homeVC====
+
+"titleHome" = "Brèves Nouvelles";
+"NewsVC" = "Des nouvelles";
+//=======================VideoVC
+"live" = "Habitent";
+//=====================profile
+"profile" = "Profil";
+"nameProfile" = "Nom";
+"emailProfile" = "E-mail";
+"changeLangunge" = "Changer de langue:";
