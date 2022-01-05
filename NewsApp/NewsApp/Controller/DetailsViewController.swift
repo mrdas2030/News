@@ -1,6 +1,6 @@
 //
 //  DetailsViewController.swift
-//  fireBaseApp
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 17/05/1443 AH.
 //
@@ -23,6 +23,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var titleLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
 //        descriotionLable.text = "descriptionLable".localized
 //        titleLable.text = "title".localized
         postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]

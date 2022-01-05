@@ -1,6 +1,6 @@
 //
 //  loginViewController.swift
-//  fireBase
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 15/05/1443 AH.
 //
@@ -20,6 +20,8 @@ class loginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
 //        passwordTextfield.text = "passowrdTextField".localized
 //        emailTextField.text = "emailTextField".localized
         passowrdLable.text = "passowrd".localized
@@ -47,3 +49,4 @@ class loginViewController: UIViewController {
         }
     }
 }
+

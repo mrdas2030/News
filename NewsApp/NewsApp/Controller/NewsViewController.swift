@@ -10,7 +10,7 @@ import UIKit
 class NewsViewController: UIViewController {
     var newsAPI = NewsAPI()
     var articles = [Article(title: "", url: "")]
-    @IBOutlet weak var newsTitleLable: UILabel!
+//    @IBOutlet weak var newsTitleLable: UILabel!
     @IBOutlet weak var NewsTableView: UITableView!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailsVC = segue.destination as! DetailesNewsViewController
@@ -20,7 +20,8 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
             navigationController?.navigationBar.prefersLargeTitles = true
         title = "NewsVC".localized
 

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  fireBaseApp
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 16/05/1443 AH.
 //

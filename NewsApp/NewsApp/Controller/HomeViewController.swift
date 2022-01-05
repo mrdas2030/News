@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  fireBase
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 15/05/1443 AH.
 //
@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 class HomeViewController: UIViewController {
     var posts = [Post]()
-    var favorits = [Favorit]()
     var selectedPost:Post?
     var selectedPostImage:UIImage?
     
@@ -22,6 +21,9 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "backButton".localized, style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .link
 // ==================== Title ========================================\\
         
         navigationController?.navigationBar.prefersLargeTitles = true

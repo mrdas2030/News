@@ -1,6 +1,6 @@
 //
 //  imageView.swift
-//  fireBase
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 15/05/1443 AH.
 //

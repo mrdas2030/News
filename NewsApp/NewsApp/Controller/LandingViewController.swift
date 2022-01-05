@@ -1,6 +1,6 @@
 //
 //  LandingViewController.swift
-//  fireBaseApp
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 16/05/1443 AH.
 //
@@ -16,6 +16,8 @@ class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
         logInButton.setTitle("login".localized, for: .normal)
         regeterButton.setTitle("regester".localized, for: .normal)
         welcomeLable.text = "welcome".localized

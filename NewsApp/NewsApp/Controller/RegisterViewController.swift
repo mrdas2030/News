@@ -1,6 +1,6 @@
 //
 //  RegisterViewController.swift
-//  fireBase
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 15/05/1443 AH.
 //
@@ -35,8 +35,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+//    ===============================\\
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
         imagePickerController.delegate = self
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
         signInButton.setTitle("signButton".localized, for: .normal)

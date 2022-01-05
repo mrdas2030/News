@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		031878DF2778817000BD86FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031878DE2778817000BD86FD /* ProfileViewController.swift */; };
-		031878E1277892A600BD86FD /* UserFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031878E0277892A600BD86FD /* UserFavorite.swift */; };
+		031878E1277892A600BD86FD /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031878E0277892A600BD86FD /* VideoModel.swift */; };
 		031FF8B5276F53C6003A95A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8B4276F53C6003A95A7 /* AppDelegate.swift */; };
 		031FF8B7276F53C6003A95A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8B6276F53C6003A95A7 /* SceneDelegate.swift */; };
 		031FF8B9276F53C6003A95A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8B8276F53C6003A95A7 /* HomeViewController.swift */; };
@@ -24,6 +24,8 @@
 		031FF8D6276F6D5D003A95A7 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D5276F6D5D003A95A7 /* imageView.swift */; };
 		031FF8D8276F6D84003A95A7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D7276F6D84003A95A7 /* Activity.swift */; };
 		0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329AD24278235F70014CBF2 /* BundleExtention.swift */; };
+		0329AD27278320C40014CBF2 /* DetailesLiveVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329AD26278320C40014CBF2 /* DetailesLiveVideoViewController.swift */; };
+		03319D072785C58900F42AD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03319D062785C58900F42AD0 /* EditProfileViewController.swift */; };
 		0338135A277F5B9F00FEF886 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03381359277F5B9F00FEF886 /* VideoViewController.swift */; };
 		0372467027721FB0002FDED4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372466F27721FB0002FDED4 /* Post.swift */; };
 		0372467227721FD6002FDED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372467127721FD6002FDED4 /* User.swift */; };
@@ -44,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		031878DE2778817000BD86FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		031878E0277892A600BD86FD /* UserFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavorite.swift; sourceTree = "<group>"; };
+		031878E0277892A600BD86FD /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		031FF8B1276F53C6003A95A7 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031FF8B4276F53C6003A95A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		031FF8B6276F53C6003A95A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		031FF8D5276F6D5D003A95A7 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
 		031FF8D7276F6D84003A95A7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0329AD24278235F70014CBF2 /* BundleExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BundleExtention.swift; path = "../../../../تجارب/BMIDemo/BMIDemo/BundleExtention.swift"; sourceTree = "<group>"; };
+		0329AD26278320C40014CBF2 /* DetailesLiveVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailesLiveVideoViewController.swift; sourceTree = "<group>"; };
+		03319D062785C58900F42AD0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		03381359277F5B9F00FEF886 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		0372466F27721FB0002FDED4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0372467127721FD6002FDED4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		031FF8A8276F53C6003A95A7 = {
 			isa = PBXGroup;
 			children = (
+				03319D062785C58900F42AD0 /* EditProfileViewController.swift */,
 				03929F2D277CD4DD00401F97 /* Localizable.strings */,
 				031FF8B3276F53C6003A95A7 /* NewsApp */,
 				031FF8B2276F53C6003A95A7 /* Products */,
@@ -123,6 +128,7 @@
 				0372467327721FFD002FDED4 /* Controller */,
 				03381359277F5B9F00FEF886 /* VideoViewController.swift */,
 				03C61013277F68DC00413193 /* playerVideoTableViewCell.xib */,
+				0329AD26278320C40014CBF2 /* DetailesLiveVideoViewController.swift */,
 				031FF8BD276F53C8003A95A7 /* Assets.xcassets */,
 				031FF8C2276F53C8003A95A7 /* Info.plist */,
 				031FF8C8276F547A003A95A7 /* GoogleService-Info.plist */,
@@ -134,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				03C61012277F68DC00413193 /* playerVideoTableViewCell.swift */,
-				031878E0277892A600BD86FD /* UserFavorite.swift */,
+				031878E0277892A600BD86FD /* VideoModel.swift */,
 				0372466F27721FB0002FDED4 /* Post.swift */,
 				0372467127721FD6002FDED4 /* User.swift */,
 				031FF8D5276F6D5D003A95A7 /* imageView.swift */,
@@ -260,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03319D072785C58900F42AD0 /* EditProfileViewController.swift in Sources */,
 				03C61014277F68DC00413193 /* playerVideoTableViewCell.swift in Sources */,
 				037246762772251F002FDED4 /* PostViewController.swift in Sources */,
 				031FF8D2276F65B6003A95A7 /* loginViewController.swift in Sources */,
@@ -268,6 +275,7 @@
 				03AB7658277B0C9D0069084D /* DetailesNewsViewController.swift in Sources */,
 				031FF8B9276F53C6003A95A7 /* HomeViewController.swift in Sources */,
 				031878DF2778817000BD86FD /* ProfileViewController.swift in Sources */,
+				0329AD27278320C40014CBF2 /* DetailesLiveVideoViewController.swift in Sources */,
 				03AB7656277AF66A0069084D /* postsNews.swift in Sources */,
 				0338135A277F5B9F00FEF886 /* VideoViewController.swift in Sources */,
 				031FF8B5276F53C6003A95A7 /* AppDelegate.swift in Sources */,
@@ -281,7 +289,7 @@
 				031FF8B7276F53C6003A95A7 /* SceneDelegate.swift in Sources */,
 				03AB7652277AEA840069084D /* NewsViewController.swift in Sources */,
 				0372467027721FB0002FDED4 /* Post.swift in Sources */,
-				031878E1277892A600BD86FD /* UserFavorite.swift in Sources */,
+				031878E1277892A600BD86FD /* VideoModel.swift in Sources */,
 				0372467827722750002FDED4 /* DetailsViewController.swift in Sources */,
 				0372467227721FD6002FDED4 /* User.swift in Sources */,
 			);

@@ -1,6 +1,6 @@
 //
 //  PostViewController.swift
-//  fireBaseApp
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 17/05/1443 AH.
 //
@@ -37,6 +37,8 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
         postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]
         //postDescriptionTextView.isEditable = false
 //        postDescriptionTextView.backgroundColor = .yellow
@@ -48,8 +50,8 @@ class PostViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
-//            postTitleTextField.text = "add title"
-//            postDescriptionTextView.text = "add description"
+            postTitleTextField.text = selectedPost.title
+            postDescriptionTextView.text = selectedPost.description
             postImageView.image = selectedImage
             actionButton.setTitle("UpdatePost".localized, for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(handleDelete))

@@ -1,6 +1,6 @@
 //
 //  ProfileViewController.swift
-//  fireBaseApp
+//  NewsApp
 //
 //  Created by يوسف جابر المالكي on 22/05/1443 AH.
 //
@@ -15,14 +15,16 @@ class ProfileViewController: UIViewController {
             profileImage.layer.cornerRadius = profileImage.bounds.height / 2
         }
     }
-    @IBOutlet weak var emailLable: UILabel!
     @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var emailLable: UILabel!
     @IBOutlet weak var nameTitleInProfile: UILabel!
     @IBOutlet weak var emailTitleInProfile: UILabel!
-    
     @IBOutlet weak var changeLangungeLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "backButton".localized, style: .plain, target: nil, action: nil)
+        getCurrenUserData()
         nameTitleInProfile.text = "nameProfile".localized
         emailTitleInProfile.text = "emailProfile".localized
         changeLangungeLable.text = "changeLangunge".localized
@@ -77,7 +79,7 @@ class ProfileViewController: UIViewController {
                      languageSegmentControl.selectedSegmentIndex = 0
                  } else if localLang == "en"{
                      languageSegmentControl.selectedSegmentIndex = 1
-                 }else {
+                 }else{
                      languageSegmentControl.selectedSegmentIndex = 2
                  }
             }
@@ -92,8 +94,35 @@ class ProfileViewController: UIViewController {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let sceneDelegate = windowScene.delegate as? SceneDelegate {
                 sceneDelegate.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController")
+                
             }
         }
     }
+    func getCurrenUserData() {
+        let refrance = Firestore.firestore()
+        if let currentUser = Auth.auth().currentUser {
+          let currentUserId = currentUser.uid
+          refrance.collection("users").document(currentUserId).getDocument {
+            userSnapshot,error in
+            if let error = error {
+              print("ERROR geting current user snapshot",error.localizedDescription)
+            }else {
+              if let userSnapshot = userSnapshot {
+                let userData = userSnapshot.data()
+                if let userData = userData {
+                    let currentUserData = User (dict: userData)
+                  DispatchQueue.main.async {
+                      self.nameLable.text = currentUserData.name
+                      self.emailLable.text = currentUserData.email
+                      self.profileImage.loadImageUsingCache(with: currentUserData.imageUrl)
+                  }
+                } else {
+                  print("User data not found or not the same !!!!")
+                }
+              }
+            }
+          }
+        }
+      }
 
 }

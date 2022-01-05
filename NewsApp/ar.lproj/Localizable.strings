@@ -8,7 +8,7 @@
 //landingVC
 "news" = "اخبار";
 "login" = "تسجيل دخول";
-"regester" = "ضيف";
+"regester" = "حساب جديد";
 "welcome" = "مرحبا بك";
 //logInVC
 "signlable" = "تسجيل الدخول";
@@ -45,3 +45,4 @@
 "nameProfile" = "الاسم";
 "emailProfile" = "الايميل";
 "changeLangunge" = "تغيير اللغة :";
+"backButton" = "رجوع";

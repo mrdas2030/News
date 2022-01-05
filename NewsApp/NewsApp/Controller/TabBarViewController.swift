@@ -27,6 +27,8 @@ class TabBarViewController:UITabBarController{
         self.tabBar.unselectedItemTintColor = .black
         
         
+        
+        
     }
 //    ============================TabBar========================\\
     override func viewDidLayoutSubviews() {
@@ -38,8 +40,8 @@ class TabBarViewController:UITabBarController{
         if UIDevice().userInterfaceIdiom == .phone{
             
             var tabFrame = tabBar.frame
-            tabFrame.size.height = 100
-            tabFrame.origin.y = view.frame.size.height - 100
+            tabFrame.size.height = 90
+            tabFrame.origin.y = view.frame.size.height - 90
             tabBar.frame = tabFrame
         }
     }

@@ -9,7 +9,7 @@
 //landingVC
 "news" = "Des nouvelles";
 "login" = "connexion";
-"regester" = "enregistrer";
+"regester" = "S'inscrire";
 "welcome" = "Bienvenue";
 //signInVC
 "signlable" = "S'identifier";
@@ -45,3 +45,4 @@
 "nameProfile" = "Nom";
 "emailProfile" = "E-mail";
 "changeLangunge" = "Changer de langue:";
+"backButton" = "Retour";
