@@ -33,8 +33,8 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let gitProfile = segue.destination as! RegisterViewController
-        gitProfile.userImageView = profileImage
+//        let gitProfile = segue.destination as! RegisterViewController
+//        gitProfile.userImageView = profileImage
 //        gitProfile.emailTextField.text = emailLable
     }
     @IBAction func handleLogout(_ sender: Any) {

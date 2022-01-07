@@ -8,12 +8,13 @@
 import UIKit
 import AVKit
 
+
 class VideoViewController: UIViewController {
     var playerViewController = AVPlayerViewController()
     var playerVew = AVPlayer()
-    var image = ["jb"]
+    var image = ["images-6","TW1000","images-6","TW1000","images-6","TW1000","images-6","TW1000","images-6"]
     var videoChanell = ["العربية","الاخبارية","الحدث","الاخبارية","الاخبارية","الحدث","الاخبارية","الحدث"]
-    var videoLive = ["بث مباشر🔴","بث مباشر🔴","بث مباشر🔴","بث مباشر🔴","بث مباشر🔴","بث مباشر🔴","بث مباشر🔴","بث مباشر🔴"]
+    var videoLive = ["طويق","طويق","طويق","طويق","طويق","طويق","طويق","طويق",]
     var videoUrl = ["https://www8.video2edit.com/dl/web7/download-file/c810c7ea-700d-489c-aa44-bb4562aa056f/IMG_3145.MP4",
     "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
@@ -54,13 +55,14 @@ class VideoViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as? playerVideoTableViewCell
-            cell?.comminInit(nameChanell: videoChanell[indexPath.row], live: videoLive[indexPath.row], videoUrl: videoUrl[indexPath.row])
+            cell?.comminInit(nameChanell: videoChanell[indexPath.row], live: videoLive[indexPath.row], videoUrl: videoUrl[indexPath.row],image:UIImage(imageLiteralResourceName: image[indexPath.row]))
             
             return cell!
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             playVideo(videoUrl: videoUrl[indexPath.row])
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         func playVideo(videoUrl:String){
             let url = URL(string: videoUrl)!

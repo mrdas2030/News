@@ -54,7 +54,7 @@ class TabBarViewController:UITabBarController{
         guard let barItemView = item.value(forKey: "view") as? UIView else {return}
         let timeInterval: TimeInterval = 0.5
         let propertyAnimmator = UIViewPropertyAnimator(duration: timeInterval, dampingRatio: 0.5){
-            barItemView.transform = CGAffineTransform.identity.scaledBy(x: 1.9, y: 1.9)
+            barItemView.transform = CGAffineTransform.identity.scaledBy(x: 0, y: 0)
         }
         propertyAnimmator.addAnimations({barItemView.transform = .identity},delayFactor: CGFloat(timeInterval))
         propertyAnimmator.startAnimation()

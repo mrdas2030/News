@@ -31,9 +31,10 @@ class EditProfileViewController : UIViewController
     
     @IBOutlet weak var userNameTextFieldInAccountDetails: UITextField!
     
+    @IBOutlet weak var emailTextFaieldInAccountDetails: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem?.tintColor = .link
         imagePickerController.delegate = self
         getCurrentUserData()
     }

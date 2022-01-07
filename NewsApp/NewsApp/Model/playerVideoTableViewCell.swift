@@ -10,18 +10,26 @@ import AVKit
 class playerVideoTableViewCell: UITableViewCell {
     @IBOutlet weak var nameChanellLable: UILabel!
     @IBOutlet weak var liveLable: UILabel!
-    @IBOutlet weak var thumbnilImageView: UIImageView!
+    @IBOutlet weak var thumbnilImageView: UIImageView!{
+        didSet{
+            thumbnilImageView.layer.cornerRadius = 20
+            
+//            thumbnilImageView.layer.shadowColor = .init(gray: 5.0, alpha: 3.6)
+//            thumbnilImageView.layer.allowsEdgeAntialiasing = true
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    func comminInit(nameChanell:String, live :String,videoUrl:String){
+    func comminInit(nameChanell:String, live :String,videoUrl:String,image:UIImage){
         self.nameChanellLable.text = nameChanell
         self.liveLable.text = live
-        let url = URL(string:videoUrl)
-        self.gitThumbnailFromVideoUrl(url: url!) { (thumbnilImage) in
-            self.thumbnilImageView.image = thumbnilImage
+        self.thumbnilImageView.image = image
+//        let url = URL(string:videoUrl)
+//        self.gitThumbnailFromVideoUrl(url: url!) { (thumbnilImage) in
+//            self.thumbnilImageView.image = thumbnilImage
         }
         
     }
@@ -45,4 +53,4 @@ class playerVideoTableViewCell: UITableViewCell {
     }
 
 
-}
+

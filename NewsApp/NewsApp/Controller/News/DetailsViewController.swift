@@ -25,6 +25,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
                     title: "backButton".localized, style: .plain, target: nil, action: nil)
+        
 //        descriotionLable.text = "descriptionLable".localized
 //        titleLable.text = "title".localized
         postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]

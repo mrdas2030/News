@@ -20,9 +20,10 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "backButton".localized, style: .plain, target: nil, action: nil)
-            navigationController?.navigationBar.prefersLargeTitles = true
+        title: "backButton".localized, style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = "NewsVC".localized
 
         NewsTableView.dataSource = self
@@ -46,6 +47,7 @@ extension NewsViewController :UITableViewDataSource{
 extension NewsViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToDetailesNews", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

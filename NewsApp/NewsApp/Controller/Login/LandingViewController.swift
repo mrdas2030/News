@@ -17,7 +17,7 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "backButton".localized, style: .plain, target: nil, action: nil)
+        title: "backButton".localized, style: .plain, target: nil, action: nil)
         logInButton.setTitle("login".localized, for: .normal)
         regeterButton.setTitle("regester".localized, for: .normal)
         welcomeLable.text = "welcome".localized

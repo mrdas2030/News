@@ -39,11 +39,14 @@
 //====================newsVC
 "NewsVC" = "News";
 //=======================VideoVC
-"live" = "Live";
+"live" = "Videos";
 //=====================profile
 "profile" = "Profile";
 "nameProfile" = "Name";
 "emailProfile" = "Email";
 "changeLangunge" = "Change Language :";
-
+//======================================///
 "backButton" = "Back";
+//=================================\\\
+
+"liveVideo" = "Live";
