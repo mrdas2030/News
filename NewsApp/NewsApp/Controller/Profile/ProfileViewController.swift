@@ -53,6 +53,7 @@ class ProfileViewController: UIViewController {
 //    ==========================================swich langunge inside App=======\\
     @IBOutlet weak var languageSegmentControl: UISegmentedControl! {
         didSet {
+            
             if let lang = UserDefaults.standard.string(forKey: "currentLanguage") {
                 switch lang {
                 case "ar":
@@ -83,6 +84,7 @@ class ProfileViewController: UIViewController {
                      languageSegmentControl.selectedSegmentIndex = 2
                  }
             }
+            
         }
     }
     @IBAction func languageChanged(_ sender: UISegmentedControl) {

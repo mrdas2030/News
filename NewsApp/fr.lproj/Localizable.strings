@@ -49,3 +49,4 @@
 //============================\\
 
 "liveVideo" = "Live";
+"6Character" = "Le mot de passe doit comporter 6 caractères ou plus";

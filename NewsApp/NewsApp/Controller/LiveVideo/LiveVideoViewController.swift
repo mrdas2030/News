@@ -11,7 +11,7 @@ class LiveVideoViewController: UIViewController {
     
     var videos :[Video] = []
     var video:Video = Video()
-    var image1 = ["Image Dark","الاخبارية","alhadath"]
+    var image1 = ["33","11","22"]
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "liveVideo".localized
@@ -49,12 +49,8 @@ extension LiveVideoViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "liveVideoCell", for: indexPath) as! LiveVideTableViewCell
         cell.TitleVideoLiveLable.text = videos[indexPath.row].title
-//        cell.imageChanellLive.image = videos[indexPath.row].image
         cell.comminInit(image:UIImage(imageLiteralResourceName:image1[indexPath.row]))
-        
-        
-//        let url = "https://img.youtube.com/vi/\(videos[indexPath.row].key)/0.jbg"
-//        cell.imageChanellLive.downlodedVideo(from: url)
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,20 +65,13 @@ extension LiveVideoViewController:UITableViewDelegate,UITableViewDataSource{
             vc.video = self.video
         }
     }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "livevideoCell", for: indexPath) as! LiveVideTableViewCell
-//        cell.TitleVideoLiveLable.text = videos[indexPath.row].title
-//        let url = "https://www.youtube.com/watch?v=HYR7uidvXo4"
-////        cell.imageChanellLive.image = UIImage(named: String(videos[indexPath.row].key))
-//        cell.imageChanellLive.downloaded(from: url)
-//        return cell
-//    }
+
     
 }
 class Video{
     var key:String = ""
     var title:String = ""
-//    var image = UIImage(named: "")
+
     
 }
 

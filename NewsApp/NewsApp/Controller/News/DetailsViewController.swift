@@ -23,6 +23,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var titleLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(
                     title: "backButton".localized, style: .plain, target: nil, action: nil)
         
@@ -44,4 +45,5 @@ class DetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
+
 

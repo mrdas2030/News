@@ -25,6 +25,7 @@
 		0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329AD24278235F70014CBF2 /* BundleExtention.swift */; };
 		03319D072785C58900F42AD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03319D062785C58900F42AD0 /* EditProfileViewController.swift */; };
 		0338135A277F5B9F00FEF886 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03381359277F5B9F00FEF886 /* VideoViewController.swift */; };
+		0338B4DA278B306500A36479 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0338B4D9278B306500A36479 /* IQKeyboardManagerSwift */; };
 		0372467027721FB0002FDED4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372466F27721FB0002FDED4 /* Post.swift */; };
 		0372467227721FD6002FDED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372467127721FD6002FDED4 /* User.swift */; };
 		037246762772251F002FDED4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037246752772251F002FDED4 /* PostViewController.swift */; };
@@ -96,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031FF8CC276F58CF003A95A7 /* FirebaseAuth in Frameworks */,
+				0338B4DA278B306500A36479 /* IQKeyboardManagerSwift in Frameworks */,
 				031FF8CE276F58CF003A95A7 /* FirebaseFirestore in Frameworks */,
 				031FF8D0276F58CF003A95A7 /* FirebaseStorage in Frameworks */,
 			);
@@ -237,6 +239,7 @@
 				031FF8CB276F58CF003A95A7 /* FirebaseAuth */,
 				031FF8CD276F58CF003A95A7 /* FirebaseFirestore */,
 				031FF8CF276F58CF003A95A7 /* FirebaseStorage */,
+				0338B4D9278B306500A36479 /* IQKeyboardManagerSwift */,
 			);
 			productName = fireBase;
 			productReference = 031FF8B1276F53C6003A95A7 /* NewsApp.app */;
@@ -270,6 +273,7 @@
 			mainGroup = 031FF8A8276F53C6003A95A7;
 			packageReferences = (
 				031FF8CA276F58CF003A95A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0338B4D8278B306500A36479 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 031FF8B2276F53C6003A95A7 /* Products */;
 			projectDirPath = "";
@@ -500,6 +504,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = News;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to access to camera to take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need access to photos to upload posts";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -531,6 +538,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = News;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to access to camera to take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need access to photos to upload posts";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -582,6 +592,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		0338B4D8278B306500A36479 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -599,6 +617,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 031FF8CA276F58CF003A95A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		0338B4D9278B306500A36479 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0338B4D8278B306500A36479 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

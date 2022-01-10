@@ -23,10 +23,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "backButton".localized, style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem?.tintColor = .link
+//        navigationItem.backBarButtonItem?.tintColor = .link
 // ==================== Title ========================================\\
-        
+//        navigationItem.title = "titleHome".localized
         navigationController?.navigationBar.prefersLargeTitles = true
+        
         title = "titleHome".localized
 // ================================================================\\
         getPosts()

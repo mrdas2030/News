@@ -18,6 +18,7 @@ class loginViewController: UIViewController {
     @IBOutlet weak var newUserLable: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet var errorLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
@@ -38,6 +39,14 @@ class loginViewController: UIViewController {
            let password = passwordTextfield.text {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if error == nil {
+                    print("Login succesfully")
+                }else{
+                    print(error?.localizedDescription as Any)
+                    Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
+                    self.errorLable.text = error?.localizedDescription
+                }
+                
                 if let _ = authResult {
                     if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as? UITabBarController {
                         vc.modalPresentationStyle = .fullScreen

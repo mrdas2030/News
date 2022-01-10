@@ -21,6 +21,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(
         title: "backButton".localized, style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -38,6 +39,7 @@ extension NewsViewController :UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         cell.textLabel?.text = articles[indexPath.row].title
         return cell
     }
@@ -47,7 +49,9 @@ extension NewsViewController :UITableViewDataSource{
 extension NewsViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToDetailesNews", sender: self)
+     
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

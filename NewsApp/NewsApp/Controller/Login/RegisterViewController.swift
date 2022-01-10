@@ -10,6 +10,7 @@ import Firebase
 class RegisterViewController: UIViewController {
     let imagePickerController = UIImagePickerController()
     var activityIndicator = UIActivityIndicatorView()
+    @IBOutlet var errorLable: UILabel!
     @IBOutlet weak var userImageView: UIImageView! {
         didSet {
             userImageView.layer.borderColor = UIColor.systemBackground.cgColor
@@ -50,22 +51,33 @@ class RegisterViewController: UIViewController {
         passowrdLable.text = "passowrd".localized
         confirmPassowrdLable.text = "Confirmpassowrd".localized
         signLableTitle.text = "signUp".localized
+        confirmPasswordTextField.delegate = self
+        passwordTextField.delegate = self
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+//        resignFirstResponder()
         // Do any additional setup after loading the view.
     }
     @IBAction func handleRegister(_ sender: Any) {
+   
         if let image = userImageView.image,
            let imageData = image.jpegData(compressionQuality: 0.25),
            let name = nameTextField.text,
            let email = emailTextField.text,
            let password = passwordTextField.text,
            let confirmPassword = confirmPasswordTextField.text,
+           
            password == confirmPassword {
+
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let error = error {
-                    print("Registration Auth Error",error.localizedDescription)
+//                password not 6 charecter
+                if let error = error{
+                    self.errorLable.text = error.localizedDescription
+                    Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                 }
                 if let authResult = authResult {
+                    
                     let storageRef = Storage.storage().reference(withPath: "users/\(authResult.user.uid)")
                     let uploadMeta = StorageMetadata.init()
                     uploadMeta.contentType = "image/jpeg"
@@ -102,6 +114,12 @@ class RegisterViewController: UIViewController {
                     }
                 }
             }
+        }else{
+            if passwordTextField.text != confirmPasswordTextField.text!{
+                errorLable.text = "PasswordnotCorecct".localized
+            }else{
+                errorLable.text = "Empty"
+            }
         }
     }
 }
@@ -113,14 +131,14 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "choose Profile Picture", message: "where do you want to pick your image from?", preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { Action in
+        let alert = UIAlertController(title: "chooseProfilePicture".localized, message: "chooseImage".localized, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera".localized, style: .default) { Action in
             self.getImage(from: .camera)
         }
-        let galaryAction = UIAlertAction(title: "photo Album", style: .default) { Action in
+        let galaryAction = UIAlertAction(title: "photoAlbum".localized, style: .default) { Action in
             self.getImage(from: .photoLibrary)
         }
-        let dismissAction = UIAlertAction(title: "Cancle", style: .destructive) { Action in
+        let dismissAction = UIAlertAction(title: "Cancle".localized, style: .destructive) { Action in
             self.dismiss(animated: true, completion: nil)
         }
         alert.addAction(cameraAction)
@@ -144,3 +162,10 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
+extension RegisterViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+        
+    }
+
