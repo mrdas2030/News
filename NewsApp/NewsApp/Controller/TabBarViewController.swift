@@ -25,7 +25,7 @@ class TabBarViewController:UITabBarController{
     
     func changColorTabBar(){
         self.tabBar.unselectedItemTintColor = .white
-        self.tabBar.tintColor = .yellow
+        self.tabBar.tintColor = .black
 //        self.tabBar.barTintColor = .secondarySystemBackground
 //        self.tabBar.
         

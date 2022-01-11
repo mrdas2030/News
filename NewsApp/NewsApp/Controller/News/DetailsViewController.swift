@@ -16,7 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!{
         didSet{
-            postImageView.layer.cornerRadius = 30
+            postImageView.layer.cornerRadius = 10
         }
     }
     @IBOutlet weak var descriotionLable: UILabel!

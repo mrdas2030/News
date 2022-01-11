@@ -49,4 +49,16 @@
 //============================\\
 
 "liveVideo" = "Live";
+"chooseProfilePicture" = "Choisissez l'image de profil";
+"photoAlbum" = "Album photo";
+"Cancle" = "Canclé";
+"Camera" = "Caméra";
+"chooseImage" = "où voulez-vous choisir votre image ?";
+"PasswordnotCorecct" = "Le mot de passe est incorrect";
 "6Character" = "Le mot de passe doit comporter 6 caractères ou plus";
+// alert
+
+"Exit" = "Se Déconnecter";
+"are you sure" = "Es-tu Sûr?";
+"Yes" = "Oui";
+"Cancel2" = "Annuler";

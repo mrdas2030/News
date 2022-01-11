@@ -38,7 +38,7 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "backButton".localized, style: .plain, target: nil, action: nil)
+        title: "backButton".localized, style: .plain, target: nil, action: nil)
         postDescriptionTextView.linkTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemBlue]
         //postDescriptionTextView.isEditable = false
 //        postDescriptionTextView.backgroundColor = .yellow
@@ -157,14 +157,14 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     private func showAlert() {
         
-        let alert = UIAlertController(title: "Choose Photo", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
+        let alert = UIAlertController(title: "chooseProfilePicture".localized, message: "chooseImage".localized, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera".localized, style: .default, handler: {(action: UIAlertAction) in
             self.getImage(fromSourceType: .camera)
         }))
-        alert.addAction(UIAlertAction(title: "Photo Album", style: .default, handler: {(action: UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "photoAlbum".localized, style: .default, handler: {(action: UIAlertAction) in
             self.getImage(fromSourceType: .photoLibrary)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancle".localized, style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     //get image from source type

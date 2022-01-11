@@ -31,10 +31,13 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "backButton".localized, style: .plain, target: nil, action: nil)
+        title: "backButton".localized, style: .plain, target: nil, action: nil)
 
+        navigationItem.title = "live".localized
             navigationController?.navigationBar.prefersLargeTitles = true
-            title = "live".localized
+//            title = "live".localized
+        
+        
             videoTableView.delegate = self
             videoTableView.dataSource = self
 

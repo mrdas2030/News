@@ -68,10 +68,10 @@ class RegisterViewController: UIViewController {
            let confirmPassword = confirmPasswordTextField.text,
            
            password == confirmPassword {
-
+            
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//                password not 6 charecter
+                
                 if let error = error{
                     self.errorLable.text = error.localizedDescription
                     Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
@@ -116,7 +116,7 @@ class RegisterViewController: UIViewController {
             }
         }else{
             if passwordTextField.text != confirmPasswordTextField.text!{
-                errorLable.text = "PasswordnotCorecct".localized
+                errorLable.text = "Password Not Corecct".localized
             }else{
                 errorLable.text = "Empty"
             }

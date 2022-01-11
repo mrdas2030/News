@@ -17,12 +17,11 @@ class loginViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var newUserLable: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet var errorLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "backButton".localized, style: .plain, target: nil, action: nil)
+        title: "backButton".localized, style: .plain, target: nil, action: nil)
 //        passwordTextfield.text = "passowrdTextField".localized
 //        emailTextField.text = "emailTextField".localized
         passowrdLable.text = "passowrd".localized

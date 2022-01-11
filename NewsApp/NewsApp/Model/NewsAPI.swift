@@ -22,7 +22,7 @@ struct NewsAPI {
         let urlSession = URLSession(configuration: .default)
         let task = urlSession.dataTask(with: url!) {  (data,urlResponse, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
             }else {
                 do {
                     let thisPosts = try JSONDecoder().decode(Posts.self, from: data!)

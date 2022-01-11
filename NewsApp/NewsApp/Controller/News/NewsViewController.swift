@@ -24,9 +24,10 @@ class NewsViewController: UIViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(
         title: "backButton".localized, style: .plain, target: nil, action: nil)
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        title = "NewsVC".localized
+        navigationItem.title = "NewsVC".localized
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "NewsVC".localized
-
         NewsTableView.dataSource = self
         NewsTableView.delegate = self
         newsAPI.delegate = self

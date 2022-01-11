@@ -14,7 +14,9 @@ class LiveVideoViewController: UIViewController {
     var image1 = ["33","11","22"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "liveVideo".localized
+//        title = "liveVideo".localized
+        navigationItem.title = "liveVideo".localized
+        navigationController?.navigationBar.prefersLargeTitles = true
 
 //        العربية
         let vides = Video()

@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!{
         didSet{
             profileImage.layer.borderColor = UIColor.systemBackground.cgColor
-            profileImage.layer.borderWidth = 3.0
+            profileImage.layer.borderWidth = 2.0
             profileImage.layer.cornerRadius = profileImage.bounds.height / 2
         }
     }
@@ -29,16 +29,30 @@ class ProfileViewController: UIViewController {
         emailTitleInProfile.text = "emailProfile".localized
         changeLangungeLable.text = "changeLangunge".localized
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "profile".localized
+//        title = "profile".localized
+        navigationItem.title = "profile".localized
+
         // Do any additional setup after loading the view.
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let gitProfile = segue.destination as! RegisterViewController
-//        gitProfile.userImageView = profileImage
-//        gitProfile.emailTextField.text = emailLable
-    }
+
     @IBAction func handleLogout(_ sender: Any) {
-        do {
+        showAlertView()
+//        do {
+//            try Auth.auth().signOut()
+//            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandingNavigationController") as? UINavigationController {
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//            }
+//        } catch  {
+//            print("ERROR in signout",error.localizedDescription)
+//        }
+        
+    }
+    func showAlertView(){
+        
+        let alert = UIAlertController(title: "Exit".localized, message: "are you sure".localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes".localized, style: .destructive, handler: {action in
+            do {
             try Auth.auth().signOut()
             if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandingNavigationController") as? UINavigationController {
                 vc.modalPresentationStyle = .fullScreen
@@ -47,7 +61,9 @@ class ProfileViewController: UIViewController {
         } catch  {
             print("ERROR in signout",error.localizedDescription)
         }
-        
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel2".localized, style: .default, handler: nil))
+        present(alert,animated: true,completion: nil)
     }
     
 //    ==========================================swich langunge inside App=======\\
@@ -71,9 +87,8 @@ class ProfileViewController: UIViewController {
                      }else {
                          languageSegmentControl.selectedSegmentIndex = 2
                      }
-                
+                    
                 }
-            
             }else {
                 let localLang =  Locale.current.languageCode
                  if localLang == "ar" {
@@ -90,6 +105,7 @@ class ProfileViewController: UIViewController {
     @IBAction func languageChanged(_ sender: UISegmentedControl) {
         if let lang = sender.titleForSegment(at:sender.selectedSegmentIndex)?.lowercased() {
             UserDefaults.standard.set(lang, forKey: "currentLanguage")
+            
             Bundle.setLanguage(lang)
             
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -126,5 +142,4 @@ class ProfileViewController: UIViewController {
           }
         }
       }
-
 }

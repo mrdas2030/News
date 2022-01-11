@@ -31,12 +31,15 @@ class EditProfileViewController : UIViewController
     
     @IBOutlet weak var userNameTextFieldInAccountDetails: UITextField!
     
+    
     @IBOutlet weak var emailTextFaieldInAccountDetails: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.backBarButtonItem?.tintColor = .link
         imagePickerController.delegate = self
         getCurrentUserData()
+        
     }
     
     @IBAction func handelEditAccount(_ sender: Any)
@@ -81,6 +84,7 @@ class EditProfileViewController : UIViewController
     }
     func getCurrentUserData()
     {
+        
         let refrance = Firestore.firestore()
         if let currentUser = Auth.auth().currentUser
         {
@@ -142,4 +146,5 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     {
         picker.dismiss(animated: true, completion: nil)
     }
+    
 }
