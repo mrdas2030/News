@@ -2,7 +2,7 @@
 
 ## Description 
 
-- news app 
+- Bringing the latest 10 news from Arab electronic newspapers and live broadcasting to some Arab news channels.
 
 
 ## Dark Mode  And Light Mode 
