@@ -15,6 +15,10 @@ class ProfileViewController: UIViewController {
             profileImage.layer.cornerRadius = profileImage.bounds.height / 2
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getCurrenUserData()
+    }
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var emailLable: UILabel!
     @IBOutlet weak var nameTitleInProfile: UILabel!

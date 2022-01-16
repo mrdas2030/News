@@ -26,7 +26,7 @@ class LiveVideoViewController: UIViewController {
         videos.append(vides)
 //        الاخبارية
         let vides2 = Video()
-        vides2.key = "cCe_bZsj7m4"
+        vides2.key = "wPuzeNwND-M"
         vides2.title = " بث مباشر قناة الاخبارية"
 //        vides.image = UIImage(named: "Image Dark")
         videos.append(vides2)

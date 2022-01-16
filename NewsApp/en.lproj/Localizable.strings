@@ -64,3 +64,6 @@
 "are you sure" = "Are you sure?";
 "Yes" = "Yes";
 "Cancel2" = "Cancel";
+//profile
+"edetButton" = "Edit";
+"editName" = "Edit Name";

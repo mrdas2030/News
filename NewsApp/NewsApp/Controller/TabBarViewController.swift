@@ -24,8 +24,8 @@ class TabBarViewController:UITabBarController{
 //    =========================Color=========================\\
     
     func changColorTabBar(){
-        self.tabBar.unselectedItemTintColor = .white
-        self.tabBar.tintColor = .black
+        self.tabBar.unselectedItemTintColor = .secondaryLabel
+        self.tabBar.tintColor = .purple
 //        self.tabBar.barTintColor = .secondarySystemBackground
 //        self.tabBar.
         

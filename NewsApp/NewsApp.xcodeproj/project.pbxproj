@@ -22,7 +22,7 @@
 		031FF8D4276F65F0003A95A7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D3276F65F0003A95A7 /* RegisterViewController.swift */; };
 		031FF8D6276F6D5D003A95A7 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D5276F6D5D003A95A7 /* imageView.swift */; };
 		031FF8D8276F6D84003A95A7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031FF8D7276F6D84003A95A7 /* Activity.swift */; };
-		0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329AD24278235F70014CBF2 /* BundleExtention.swift */; };
+		0328ED9E2794051E008E57FD /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328ED9D2794051E008E57FD /* BundleExtention.swift */; };
 		03319D072785C58900F42AD0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03319D062785C58900F42AD0 /* EditProfileViewController.swift */; };
 		0338135A277F5B9F00FEF886 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03381359277F5B9F00FEF886 /* VideoViewController.swift */; };
 		0338B4DA278B306500A36479 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0338B4D9278B306500A36479 /* IQKeyboardManagerSwift */; };
@@ -61,7 +61,7 @@
 		031FF8D3276F65F0003A95A7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		031FF8D5276F6D5D003A95A7 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
 		031FF8D7276F6D84003A95A7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		0329AD24278235F70014CBF2 /* BundleExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BundleExtention.swift; path = "../../../../تجارب/BMIDemo/BMIDemo/BundleExtention.swift"; sourceTree = "<group>"; };
+		0328ED9D2794051E008E57FD /* BundleExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtention.swift; sourceTree = "<group>"; };
 		03319D062785C58900F42AD0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		03381359277F5B9F00FEF886 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		0372466F27721FB0002FDED4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				03AB7653277AECF80069084D /* NewsAPI.swift */,
 				031FF8D7276F6D84003A95A7 /* Activity.swift */,
 				03AB7655277AF6690069084D /* postsNews.swift */,
-				0329AD24278235F70014CBF2 /* BundleExtention.swift */,
+				0328ED9D2794051E008E57FD /* BundleExtention.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,10 +320,10 @@
 				031FF8B5276F53C6003A95A7 /* AppDelegate.swift in Sources */,
 				03E934C62788C9220026FABE /* LiveVideTableViewCell.swift in Sources */,
 				031FF8D6276F6D5D003A95A7 /* imageView.swift in Sources */,
+				0328ED9E2794051E008E57FD /* BundleExtention.swift in Sources */,
 				0372467A277228EB002FDED4 /* PostTableViewCell.swift in Sources */,
 				03E57A282770688000469685 /* LandingViewController.swift in Sources */,
 				03E3BAFC27805F4F00238D65 /* TabBarViewController.swift in Sources */,
-				0329AD25278235F70014CBF2 /* BundleExtention.swift in Sources */,
 				03AB7654277AECF80069084D /* NewsAPI.swift in Sources */,
 				031FF8B7276F53C6003A95A7 /* SceneDelegate.swift in Sources */,
 				03AB7652277AEA840069084D /* NewsViewController.swift in Sources */,

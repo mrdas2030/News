@@ -45,7 +45,7 @@ class RegisterViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
         signInButton.setTitle("signButton".localized, for: .normal)
         loginButton.setTitle("login1".localized, for: .normal)
-        welcomeMessage.text = "welcomeMsg".localized
+//        welcomeMessage.text = "welcomeMsg".localized
         emailLable.text = "email".localized
         nameLable.text = "name".localized
         passowrdLable.text = "passowrd".localized

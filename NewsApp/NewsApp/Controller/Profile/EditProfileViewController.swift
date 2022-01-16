@@ -15,6 +15,8 @@ class EditProfileViewController : UIViewController
     var selectedAccount:User?
     var selectedAccountImage:UIImage?
     
+    @IBOutlet var edetButton: UIButton!
+    @IBOutlet var edetNameLable: UILabel!
     @IBOutlet weak var userImageInAccountDetails: UIImageView!
     {
         didSet
@@ -30,12 +32,18 @@ class EditProfileViewController : UIViewController
     }
     
     @IBOutlet weak var userNameTextFieldInAccountDetails: UITextField!
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getCurrentUserData()
+       
+    }
+
     
     @IBOutlet weak var emailTextFaieldInAccountDetails: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        edetButton.setTitle("edetButton".localized, for: .normal)
+        edetNameLable.text = "editName".localized
         navigationItem.backBarButtonItem?.tintColor = .link
         imagePickerController.delegate = self
         getCurrentUserData()
@@ -115,13 +123,13 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     { showAlert() }
     func showAlert()
     {
-        let alert = UIAlertController(title: "chose Picture", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "chooseProfilePicture".localized, message: "chooseImage".localized, preferredStyle: .actionSheet)
         
-        let cameraAction = UIAlertAction(title:" Camera ", style: .default)
+        let cameraAction = UIAlertAction(title:"Camera".localized, style: .default)
         { Action in self.getImage(from: .camera ) }
-        let galaryAction = UIAlertAction(title: " Photo Album ", style: .default)
+        let galaryAction = UIAlertAction(title: "photoAlbum".localized, style: .default)
         { Action in self.getImage(from: .photoLibrary)}
-        let dismissAction = UIAlertAction(title: " Cancle ", style: .destructive)
+        let dismissAction = UIAlertAction(title: "Cancle".localized, style: .destructive)
         { Action in self.dismiss(animated: true, completion: nil) }
         alert.addAction(cameraAction)
         alert.addAction(galaryAction)
