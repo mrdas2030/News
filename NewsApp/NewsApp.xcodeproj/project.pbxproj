@@ -129,13 +129,21 @@
 				0372466E27721F92002FDED4 /* Model */,
 				0372467427722052002FDED4 /* View */,
 				0372467327721FFD002FDED4 /* Controller */,
-				03381359277F5B9F00FEF886 /* VideoViewController.swift */,
-				03C61013277F68DC00413193 /* playerVideoTableViewCell.xib */,
 				03E934C12786CB100026FABE /* Assets 2.xcassets */,
 				031FF8C2276F53C8003A95A7 /* Info.plist */,
 				031FF8C8276F547A003A95A7 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		0328ED9F279434E3008E57FD /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				03381359277F5B9F00FEF886 /* VideoViewController.swift */,
+				03C61012277F68DC00413193 /* playerVideoTableViewCell.swift */,
+				03C61013277F68DC00413193 /* playerVideoTableViewCell.xib */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		032C30032788FDEF008D7A83 /* LiveVideo */ = {
@@ -183,7 +191,6 @@
 		0372466E27721F92002FDED4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				03C61012277F68DC00413193 /* playerVideoTableViewCell.swift */,
 				031878E0277892A600BD86FD /* VideoModel.swift */,
 				0372466F27721FB0002FDED4 /* Post.swift */,
 				0372467127721FD6002FDED4 /* User.swift */,
@@ -203,6 +210,7 @@
 				032C30052788FE5D008D7A83 /* News */,
 				032C30042788FE1B008D7A83 /* Profile */,
 				032C30032788FDEF008D7A83 /* LiveVideo */,
+				0328ED9F279434E3008E57FD /* Video */,
 				031FF8B4276F53C6003A95A7 /* AppDelegate.swift */,
 				031FF8B6276F53C6003A95A7 /* SceneDelegate.swift */,
 				03E3BAFB27805F4F00238D65 /* TabBarViewController.swift */,

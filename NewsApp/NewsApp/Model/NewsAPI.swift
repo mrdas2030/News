@@ -17,9 +17,12 @@ protocol NewsAPIDelegate{
 struct NewsAPI {
     var delegate:NewsAPIDelegate?
     func fatchNews(){
+        //1- create Url
         let urlString = "https://newsapi.org/v2/top-headlines?sources=google-news-sa&apiKey=9f5b86dd95d74249ade4d42e9a329972"
         let url = URL(string: urlString)
+        //2- create Url Session
         let urlSession = URLSession(configuration: .default)
+        //3- create Task
         let task = urlSession.dataTask(with: url!) {  (data,urlResponse, error) in
             if error != nil {
                 print(error?.localizedDescription as Any)
@@ -27,14 +30,12 @@ struct NewsAPI {
                 do {
                     let thisPosts = try JSONDecoder().decode(Posts.self, from: data!)
                     delegate?.didFetchPosts(posts: thisPosts)
-//                    print(posts.articles[2].title)
-//                    print(posts.articles[2].url)
-
                 }catch{
                     print(error)
                 }
             }
         }
+        //4- Resum task
         task.resume()
     }
 }

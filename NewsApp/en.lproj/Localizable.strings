@@ -8,13 +8,13 @@
 
 //landingVC
 "news" = "News";
-"login" = "login";
+"login" = "Login";
 "regester" = "Sign Up";
-"welcome" = "welcome";
+"welcome" = "Welcome";
 //signInVC
 "signlable" = "Sign in";
-"email" = "email";
-"passowrd" = "passowrd";
+"email" = "Email";
+"passowrd" = "Passowrd";
 "signButton" = "Contenue";
 "newUser" = "Have an Account ?";
 "signUpButton" = "Sign Up";
@@ -22,7 +22,7 @@
 //"passowrdTextField" = "Type Your Passowrd";
 //regesterVC
 "email" = "Email";
-"passowrd" = "passowrd";
+"passowrd" = "Passowrd";
 "Confirmpassowrd" = "Confirm Passowrd";
 "name" = "name";
 "signUp" = "Sign Up";
@@ -67,3 +67,5 @@
 //profile
 "edetButton" = "Edit";
 "editName" = "Edit Name";
+
+"changePhoto" = "Click on the image to change";

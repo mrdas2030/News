@@ -15,6 +15,7 @@ class EditProfileViewController : UIViewController
     var selectedAccount:User?
     var selectedAccountImage:UIImage?
     
+    @IBOutlet var changePhotoLable: UILabel!
     @IBOutlet var edetButton: UIButton!
     @IBOutlet var edetNameLable: UILabel!
     @IBOutlet weak var userImageInAccountDetails: UIImageView!
@@ -42,6 +43,7 @@ class EditProfileViewController : UIViewController
     @IBOutlet weak var emailTextFaieldInAccountDetails: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        changePhotoLable.text = "changePhoto".localized
         edetButton.setTitle("edetButton".localized, for: .normal)
         edetNameLable.text = "editName".localized
         navigationItem.backBarButtonItem?.tintColor = .link

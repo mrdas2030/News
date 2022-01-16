@@ -50,13 +50,10 @@ extension NewsViewController :UITableViewDataSource{
 extension NewsViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToDetailesNews", sender: self)
-     
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-        
     }
 }
 extension NewsViewController:NewsAPIDelegate{
@@ -67,10 +64,7 @@ extension NewsViewController:NewsAPIDelegate{
             self.NewsTableView.reloadData()
         }
     }
-    
     func didFailWithError(error: Error?) {
         print(error!)
     }
-    
-    
 }
