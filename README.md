@@ -5,7 +5,7 @@
 - news app 
 
 
-## Demo
+## Dark Mode  and light Mode 
 
 ![](lightMode.gif)
 ![](darkMode.gif)
@@ -32,6 +32,10 @@
 - Firebase
 - IQKeyboardManagerSwift
 - WebKit
+
+## API
+
+- I used the API from this site https://newsapi.org/
 
 ## WireFrame
 
