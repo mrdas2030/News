@@ -17,8 +17,14 @@
 
 
 ## User Stories 
-
-![](User Stories.png)
+- User can create a login
+- User can log in
+- User can add post
+- User can update post
+- User can delete post 
+- User can read post other account 
+- User can read news
+- User can update Profile 
 
 ## FrameWork
 
