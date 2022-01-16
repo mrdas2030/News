@@ -1,11 +1,11 @@
 # News app
 
-##Description 
+## Description 
 
 - news app 
 
 
-##Demo
+## Demo
 
 ![](lightMode.gif)
 ![](darkMode.gif)
@@ -18,7 +18,7 @@
 
 ## User Stories 
 
-![](UserStories.png)
+![](User Stories.png)
 
 ## FrameWork
 
