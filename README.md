@@ -7,7 +7,6 @@
 
 ##Demo
 
-![](DemoApp.gif)
 ![](lightMode.gif)
 ![](darkMode.gif)
 
@@ -19,7 +18,7 @@
 
 ## User Stories 
 
-![](User Stories.png)
+![](UserStories.png)
 
 ## FrameWork
 
