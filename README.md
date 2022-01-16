@@ -5,7 +5,7 @@
 - news app 
 
 
-## Dark Mode  and light Mode 
+## Dark Mode  And Light Mode 
 
 ![](lightMode.gif)
 ![](darkMode.gif)
